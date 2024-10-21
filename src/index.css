@@ -1,0 +1,92 @@
+:root {
+  --main-gradient: linear-gradient(
+    140deg,
+    rgba(66, 69, 51, 1) 9%,
+    rgba(225, 146, 47, 1) 83%
+  );
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  min-height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Roboto", sans-serif;
+}
+#root {
+  min-height: 100%;
+}
+
+.navbar-brand {
+  width: 150px;
+}
+
+.hero {
+  height: calc(100lvh - 66px);
+  background-image: url("./assets/images/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  filter: contrast(120%);
+}
+.hero h1 {
+  text-shadow: 2px 2px 2px #000000;
+  backdrop-filter: blur(30px);
+}
+.hover-sec:hover {
+  color: var(--bs-secondary) !important;
+}
+.bg-hover-sec:hover {
+  background-color: var(--bs-secondary) !important;
+}
+
+.border-gradient {
+  border-width: 5px;
+  border-style: solid;
+  border-image: var(--main-gradient) 1;
+}
+.bg-main-gradient {
+  background: var(--main-gradient);
+}
+.contact-info i {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.contact-info:hover i {
+  background-color: var(--bs-secondary) !important;
+}
+.projects-slider .slick-center img {
+  transform: scale(1.1);
+}
+.projects-slider img {
+  transition: 0.3s;
+}
+.clients img {
+  filter: grayscale(1);
+  height: 50px;
+}
+.clients img:hover {
+  filter: grayscale(0);
+}
+.service-card:hover i {
+  background-color: var(--bs-secondary) !important;
+}
+.service-card:hover h5 {
+  color: var(--bs-secondary) !important;
+}
+textarea {
+  resize: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-brand {
+    width: 180px;
+  }
+}

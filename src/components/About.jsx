@@ -1,0 +1,36 @@
+import aboutImage from "/src/assets/images/about image.jpeg";
+
+function About() {
+  return (
+    <>
+      <section className="py-5">
+        <div className="container">
+          <div className="d-flex justify-content-between align-items-center flex-column flex-lg-row">
+            <div className="col-12 col-lg-5">
+              <h2 className="mb-4 fw-bold">Our Work is Timeless</h2>
+              <p className="lh-lg">
+                We are a leading company dedicated to creating spaces where
+                people live, work, and thrive. Specializing in residential and
+                commercial construction, we've honed our craft over the years
+                and recently expanded into interior finishing and decoration. We
+                take pride in delivering thoughtful, high-quality solutions that
+                reflect our clients' vision, ensuring every space feels personal
+                and inviting. Your project is our priority, and we're here to
+                bring it to life with care and expertise.
+              </p>
+            </div>
+            <div className="col-12 col-lg-6 my-3">
+              <img
+                src={aboutImage}
+                alt="dining area + living"
+                className="w-100 p-3 border-gradient"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default About;
