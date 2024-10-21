@@ -9,6 +9,7 @@ function Clients() {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 991,
@@ -59,7 +60,15 @@ function Clients() {
 
             <div className="p-3 mx-auto">
               <img
-                src="/src/assets/images/clients/clients4.webp"
+                src="/src/assets/images/clients/clients3.png"
+                className="img-fluid mx-auto"
+                alt=""
+              />
+            </div>
+
+            <div className="p-3 mx-auto">
+              <img
+                src="/src/assets/images/clients/clients4.png"
                 className="img-fluid mx-auto"
                 alt=""
               />
@@ -73,13 +82,13 @@ function Clients() {
               />
             </div>
 
-            {/*  <div className="p-3 mx-auto">
+            <div className="p-3 mx-auto">
               <img
-                src="/src/assets/images/clients/client-6.png"
+                src="/src/assets/images/clients/clients6.webp"
                 className="img-fluid mx-auto"
                 alt=""
               />
-            </div> */}
+            </div>
           </Slider>
         </div>
       </section>
