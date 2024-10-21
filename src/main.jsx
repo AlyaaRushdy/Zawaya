@@ -11,6 +11,7 @@ import "@popperjs/core/dist/umd/popper.js";
 import "bootstrap/dist/js/bootstrap.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "animate.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
