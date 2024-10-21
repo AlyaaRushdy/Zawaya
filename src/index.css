@@ -75,6 +75,10 @@ h6 {
 .clients img:hover {
   filter: grayscale(0);
 }
+.service-card i {
+  width: 64px;
+  height: 64px;
+}
 .service-card:hover i {
   background-color: var(--bs-secondary) !important;
 }
