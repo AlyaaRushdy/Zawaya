@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", "Roboto", sans-serif;
+  font-family: "Nunito", "Roboto", sans-serif;
 }
 #root {
   min-height: 100%;
@@ -37,7 +37,7 @@ h6 {
 }
 .hero h1 {
   text-shadow: 2px 2px 2px #000000;
-  backdrop-filter: blur(30px);
+  /* backdrop-filter: blur(30px); */
 }
 .hover-sec:hover {
   color: var(--bs-secondary) !important;
