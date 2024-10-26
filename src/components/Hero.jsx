@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <>
-      <section className="hero text-bg-dark-subtle">
+      <section className="hero text-bg-dark-subtle" id="hero">
         <div className="container h-100">
           <div className="row justify-content-center align-items-center px-1 h-100 animate__animated animate__zoomIn animate__delay-1s">
             <div className="col-12 col-md-11 col-lg-10 col-xl-9 ">

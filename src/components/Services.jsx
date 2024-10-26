@@ -3,7 +3,7 @@ import ServiceBlock from "./reusable/serviceBlock";
 function Services() {
   return (
     <>
-      <section className="pt-5">
+      <section className="pt-5" id="services">
         <div className="container">
           <h2 className="fw-bold">Design Services</h2>
           <div className="row row-cols-1 row-cols-md-2 text-center mb-3">
@@ -11,7 +11,7 @@ function Services() {
               faClass={"fa-trowel-bricks"}
               text={"Architecture Design"}
             />
-            <ServiceBlock faClass={"fa-hotel"} text={"Structual Design"} />
+            <ServiceBlock faClass={"fa-hotel"} text={"Structural Design"} />
             <ServiceBlock faClass={"fa-couch"} text={"Interior Planning"} />
             <ServiceBlock
               faClass={"fa-mountain-sun"}

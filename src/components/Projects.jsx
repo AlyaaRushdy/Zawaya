@@ -186,7 +186,7 @@ function Projects() {
 
   return (
     <>
-      <section className="pt-4 pb-5">
+      <section className="pt-4 pb-5" id="projects">
         <div className="container">
           <h2 className="fw-bold pb-4">Our Projects</h2>
           <ResponsiveMasonry

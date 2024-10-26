@@ -3,7 +3,7 @@ import aboutImage from "/src/assets/images/about image.jpeg";
 function About() {
   return (
     <>
-      <section className="py-5">
+      <section className="py-5" id="about">
         <div className="container">
           <div className="d-flex justify-content-between align-items-center flex-column flex-lg-row">
             <div className="col-12 col-lg-5">

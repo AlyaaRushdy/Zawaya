@@ -52,7 +52,7 @@ function SampleOfOurWork() {
     ],
   };
   return (
-    <section className="bg-primary py-5">
+    <section className="bg-primary py-5" id="ourWork">
       <div className="container">
         <div className="py-4 text-white d-flex flex-wrap ">
           <h2 className="fw-bold">Sample of Our Work</h2>
