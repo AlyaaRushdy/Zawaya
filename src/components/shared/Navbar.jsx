@@ -1,14 +1,31 @@
 import { HashLink } from "react-router-hash-link";
 import logo from "../../assets/logo.png";
+import { useEffect, useState } from "react";
 
 function Navbar() {
+  const [bgClass, setBgClass] = useState("bg-transparent");
+
+  const changeBackgroundColor = () => {
+    window.scrollY > 50 ? setBgClass("bg-body") : setBgClass("bg-transparent");
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackgroundColor);
+    return () => {
+      window.removeEventListener("scroll", changeBackgroundColor);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar navbar-expand-md py-1">
+      <nav
+        className={`navbar navbar-expand-md py-1 z-1 sticky-top ${bgClass}`}
+        id="navbar"
+      >
         <div className="container justify-content-between align-items-center">
-          <a className="navbar-brand" href="#">
+          <HashLink className="navbar-brand" to={"/#hero"} smooth>
             <img src={logo} alt="logo img" className="w-100" />
-          </a>
+          </HashLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -26,23 +43,24 @@ function Navbar() {
           >
             <ul className="navbar-nav gap-3 row-gap-1 mx-auto text-center text-lg-start">
               <li className="nav-item">
-                <a
-                  className="nav-link hover-sec active"
-                  aria-current="page"
-                  href="#"
-                >
+                <HashLink className="nav-link hover-sec active" to={"/#about"}>
                   About
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link hover-sec" href="#">
+                <HashLink className="nav-link hover-sec" to={"/#ourWork"}>
+                  Our Work
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <HashLink className="nav-link hover-sec" to={"/#services"}>
                   Services
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link hover-sec" href="#">
+                <HashLink className="nav-link hover-sec" to={"/#projects"}>
                   Projects
-                </a>
+                </HashLink>
               </li>
             </ul>
             <HashLink
