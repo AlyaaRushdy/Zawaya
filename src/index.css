@@ -4,6 +4,7 @@
     rgba(66, 69, 51, 1) 9%,
     rgba(225, 146, 47, 1) 83%
   );
+  scroll-padding-top: 65px;
 }
 
 body {
@@ -22,12 +23,17 @@ h6 {
   min-height: 100%;
 }
 
+.navbar {
+  backdrop-filter: blur(30px) saturate(85%);
+}
+
 .navbar-brand {
   width: 150px;
 }
 
 .hero {
-  height: calc(100lvh - 66px);
+  height: 100lvh;
+  margin-top: -66px;
   background-image: url("./assets/images/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +45,8 @@ h6 {
   text-shadow: 2px 2px 2px #000000;
   /* backdrop-filter: blur(30px); */
 }
-.hover-sec:hover {
+.hover-sec:hover,
+.hover-sec.active {
   color: var(--bs-secondary) !important;
 }
 .bg-hover-sec:hover {
