@@ -20,12 +20,12 @@ function Footer() {
             </li>
             <li>
               <a href="#" className="link-primary ">
-                <i class="fa-brands fa-instagram fa-xl hover-sec"></i>
+                <i className="fa-brands fa-instagram fa-xl hover-sec"></i>
               </a>
             </li>
             <li>
               <a href="#" className="link-primary ">
-                <i class="fa-brands fa-whatsapp fa-xl hover-sec"></i>
+                <i className="fa-brands fa-whatsapp fa-xl hover-sec"></i>
               </a>
             </li>
           </ul>
