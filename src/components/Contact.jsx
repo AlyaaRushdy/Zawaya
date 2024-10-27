@@ -45,7 +45,7 @@ function Contact() {
                 heading={"Address"}
                 href={"https://maps.app.goo.gl/HdgTFa4bUw1AaDEs9"}
                 link_text={
-                  "Moustafa Kamel Axis, New Cairo 1, Cairo Governorate 11865"
+                  "185 Moustafa Kamel Axis, New Cairo 1, Cairo Governorate"
                 }
               />
               <ContactInfo
