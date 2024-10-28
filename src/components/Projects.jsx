@@ -4,21 +4,21 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 const importAllAlbumsObject = {
-  album1: import.meta.glob("/assets/images/projects/1/*.{jpg,jpeg,png,gif}"),
-  album2: import.meta.glob("/assets/images/projects/2/*.{jpg,jpeg,png,gif}"),
-  album3: import.meta.glob("/assets/images/projects/3/*.{jpg,jpeg,png,gif}"),
-  album4: import.meta.glob("/assets/images/projects/4/*.{jpg,jpeg,png,gif}"),
-  album5: import.meta.glob("/assets/images/projects/5/*.{jpg,jpeg,png,gif}"),
-  album6: import.meta.glob("/assets/images/projects/6/*.{jpg,jpeg,png,gif}"),
-  album7: import.meta.glob("/assets/images/projects/7/*.{jpg,jpeg,png,gif}"),
-  album8: import.meta.glob("/assets/images/projects/8/*.{jpg,jpeg,png,gif}"),
-  album9: import.meta.glob("/assets/images/projects/9/*.{jpg,jpeg,png,gif}"),
-  album10: import.meta.glob("/assets/images/projects/10/*.{jpg,jpeg,png,gif}"),
-  album11: import.meta.glob("/assets/images/projects/11/*.{jpg,jpeg,png,gif}"),
-  album12: import.meta.glob("/assets/images/projects/12/*.{jpg,jpeg,png,gif}"),
-  album13: import.meta.glob("/assets/images/projects/13/*.{jpg,jpeg,png,gif}"),
-  album14: import.meta.glob("/assets/images/projects/14/*.{jpg,jpeg,png,gif}"),
-  album15: import.meta.glob("/assets/images/projects/15/*.{jpg,jpeg,png,gif}"),
+  album1: import.meta.glob("/public/images/projects/1/*.{jpg,jpeg,png,gif}"),
+  album2: import.meta.glob("/public/images/projects/2/*.{jpg,jpeg,png,gif}"),
+  album3: import.meta.glob("/public/images/projects/3/*.{jpg,jpeg,png,gif}"),
+  album4: import.meta.glob("/public/images/projects/4/*.{jpg,jpeg,png,gif}"),
+  album5: import.meta.glob("/public/images/projects/5/*.{jpg,jpeg,png,gif}"),
+  album6: import.meta.glob("/public/images/projects/6/*.{jpg,jpeg,png,gif}"),
+  album7: import.meta.glob("/public/images/projects/7/*.{jpg,jpeg,png,gif}"),
+  album8: import.meta.glob("/public/images/projects/8/*.{jpg,jpeg,png,gif}"),
+  album9: import.meta.glob("/public/images/projects/9/*.{jpg,jpeg,png,gif}"),
+  album10: import.meta.glob("/public/images/projects/10/*.{jpg,jpeg,png,gif}"),
+  album11: import.meta.glob("/public/images/projects/11/*.{jpg,jpeg,png,gif}"),
+  album12: import.meta.glob("/public/images/projects/12/*.{jpg,jpeg,png,gif}"),
+  album13: import.meta.glob("/public/images/projects/13/*.{jpg,jpeg,png,gif}"),
+  album14: import.meta.glob("/public/images/projects/14/*.{jpg,jpeg,png,gif}"),
+  album15: import.meta.glob("/public/images/projects/15/*.{jpg,jpeg,png,gif}"),
 };
 console.log(importAllAlbumsObject);
 const importedAlbumsValues = Object.values(importAllAlbumsObject);

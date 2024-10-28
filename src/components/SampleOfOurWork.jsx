@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Slider from "react-slick";
 
 const importedImagesObject = import.meta.glob(
-  "/images/projects-slider/*.{jpg,jpeg,png,gif}"
+  "/public/images/projects-slider/*.{jpg,jpeg,png,gif}"
 );
 const images = Object.values(importedImagesObject).reduce((prev, curr) => {
   prev.push(curr.name);
