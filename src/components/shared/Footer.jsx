@@ -1,4 +1,5 @@
 import { HashLink } from "react-router-hash-link";
+import logoSec from "/src/assets/favicon.png";
 
 function Footer() {
   return (
@@ -6,11 +7,7 @@ function Footer() {
       <div className="container">
         <footer className="d-flex flex-row justify-content-between align-items-center gap-4 py-3 my-4 border-top">
           <HashLink to="/#hero">
-            <img
-              src="/src/assets/favicon.png"
-              alt="logo img"
-              style={{ width: "60px" }}
-            />
+            <img src={logoSec} alt="logo img" style={{ width: "60px" }} />
           </HashLink>
           <ul className="list-unstyled d-flex gap-4 m-0">
             <li>
