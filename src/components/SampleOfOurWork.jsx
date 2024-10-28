@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import Slider from "react-slick";
 
-const basePath = import.meta.env.DEV ? "/public/images" : "/images";
+const basePath = import.meta.env.DEV ? "/src/" : "/";
 const importedImagesObject = import.meta.glob(
-  "/public/images/projects-slider/*.{jpg,jpeg,png,gif}"
+  "/src/assets/images/projects-slider/*.{jpg,jpeg,png,gif}"
 );
 const images = Object.values(importedImagesObject).reduce((prev, curr) => {
-  prev.push(basePath + curr.name.slice(14));
+  prev.push(basePath + curr.name.slice(5));
   return prev;
 }, []);
 
