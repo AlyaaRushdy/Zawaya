@@ -1,8 +1,8 @@
 :root {
   --bs-primary-rgb: 66, 69, 51 !important;
   --bs-secondary-rgb: 225, 146, 47 !important;
-  --bs-primary: #424533;
-  --bs-secondary: #e1922f;
+  --bs-primary: #424533 !important;
+  --bs-secondary: #e1922f !important;
   --main-gradient: linear-gradient(
     140deg,
     rgba(66, 69, 51, 1) 9%,
