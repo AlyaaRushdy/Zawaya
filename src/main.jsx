@@ -12,6 +12,7 @@ import "bootstrap/dist/js/bootstrap.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "animate.css";
+import "react-responsive-masonry/umd/react-responsive-masonry.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
