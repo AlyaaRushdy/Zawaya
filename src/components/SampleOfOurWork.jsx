@@ -1,12 +1,13 @@
 import { useRef } from "react";
 import Slider from "react-slick";
 
-import imgSrc1 from "../assets/images/projects-slider/1.jpeg";
-import imgSrc2 from "../assets/images/projects-slider/2.jpeg";
-import imgSrc3 from "../assets/images/projects-slider/3.jpeg";
-import imgSrc4 from "../assets/images/projects-slider/4.jpeg";
-import imgSrc5 from "../assets/images/projects-slider/5.jpeg";
-import imgSrc6 from "../assets/images/projects-slider/6.jpg";
+const importedImagesObject = import.meta.glob(
+  "/src/assets/images/projects-slider/*.{jpg,jpeg,png,gif}"
+);
+const images = Object.values(importedImagesObject).reduce((prev, curr) => {
+  prev.push(curr.name);
+  return prev;
+}, []);
 
 function SampleOfOurWork() {
   let sliderRef = useRef(null);
@@ -20,7 +21,7 @@ function SampleOfOurWork() {
     className: "projects-slider",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: 0,
     slidesToShow: 3,
     speed: 500,
     arrows: false,
@@ -73,24 +74,14 @@ function SampleOfOurWork() {
             sliderRef = slider;
           }}
         >
-          {/* <div className="p-3 mx-auto">
-            <img src={imgSrc1} className="img-fluid" alt="" />
-          </div> */}
-          <div className="p-3 mx-auto">
-            <img src={imgSrc2} className="img-fluid" alt="" />
-          </div>
-          <div className="p-3 mx-auto">
-            <img src={imgSrc3} className="img-fluid" alt="" />
-          </div>
-          <div className="p-3 mx-auto">
-            <img src={imgSrc4} className="img-fluid" alt="" />
-          </div>
-          <div className="p-3 mx-auto">
-            <img src={imgSrc5} className="img-fluid" alt="" />
-          </div>
-          {/* <div className="p-3 mx-auto">
-            <img src={imgSrc6} className="img-fluid" alt="" />
-          </div> */}
+          {images.map((src, index) => (
+            <img
+              src={src}
+              className="img-fluid p-3"
+              alt="project image"
+              key={index}
+            />
+          ))}
         </Slider>
       </div>
     </section>
