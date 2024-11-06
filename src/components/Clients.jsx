@@ -41,14 +41,12 @@ function Clients() {
     <>
       <section className="bg-body-tertiary">
         <div className="container clients">
-          {console.log(images)}
           <Slider {...settings}>
             {images.map((image, i) => (
-              <div className="p-3 ">
+              <div className="p-3" key={i}>
                 <img
                   src={image}
                   className="img-fluid mx-auto"
-                  key={i}
                   alt={`client ${i + 1} image`}
                 />
               </div>
