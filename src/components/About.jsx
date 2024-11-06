@@ -1,4 +1,4 @@
-import aboutImage from "/src/assets/images/about image.jpeg";
+import aboutImage from "/src/assets/images/about.jpg";
 
 function About() {
   return (
@@ -22,7 +22,7 @@ function About() {
             <div className="col-12 col-lg-6 my-3">
               <img
                 src={aboutImage}
-                alt="dining area + living"
+                alt="outdoor and exterior"
                 className="w-100 p-3 border-gradient"
               />
             </div>
