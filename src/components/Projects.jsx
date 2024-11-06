@@ -1,4 +1,5 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import ScrollAnimation from "react-animate-on-scroll";
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -88,19 +89,27 @@ function Projects() {
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
           >
+            {/* animate__fadeInUp  animate__backInUp animate__fadeInUpBig  */}
             <Masonry columnsCount={3} gutter="10px">
               {entryPoints.map((image, i) => (
-                <img
+                <ScrollAnimation
+                  animateIn="animate__fadeInUp"
+                  delay={150}
+                  duration={1}
+                  animateOnce={true}
                   key={i}
-                  src={image.src}
-                  alt={image.alt}
-                  style={{
-                    width: "100%",
-                    display: "block",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => openAlbum(image.albumName)}
-                />
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{
+                      width: "100%",
+                      display: "block",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => openAlbum(image.albumName)}
+                  />
+                </ScrollAnimation>
               ))}
 
               {open && (
