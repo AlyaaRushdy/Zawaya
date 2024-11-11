@@ -48,7 +48,7 @@ h6 {
 }
 
 .hero {
-  /* height: 100lvh; */
+  height: 100lvh;
   margin-top: -66px;
   background-image: url("./assets/images/hero.jpg");
   background-position: center;
