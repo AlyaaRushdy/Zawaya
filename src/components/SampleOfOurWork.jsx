@@ -15,6 +15,7 @@ function SampleOfOurWork() {
   const next = () => {
     sliderRef.slickNext();
   };
+  // TODO: lazyLoad: true,
   const previous = () => {
     sliderRef.slickPrev();
   };
@@ -31,7 +32,6 @@ function SampleOfOurWork() {
         breakpoint: 1200,
         settings: {
           centerMode: true,
-          centerPadding: "60px",
           slidesToShow: 3,
         },
       },
@@ -56,9 +56,9 @@ function SampleOfOurWork() {
   return (
     <section className="bg-primary py-5" id="ourWork">
       <div className="container">
-        <div className="py-4 text-white d-flex flex-wrap ">
-          <h2 className="fw-bold">Sample of Our Work</h2>
-          <div className="ms-auto">
+        <div className="py-sm-4 pb-4 text-white d-flex flex-wrap align-items-center row-gap-2">
+          <h2 className="fw-bold mb-0">Sample of Our Work</h2>
+          <div className="ms-auto ">
             <button className="btn text-white me-2 fs-4" onClick={previous}>
               <i className="fa-solid fa-arrow-left"></i>
             </button>

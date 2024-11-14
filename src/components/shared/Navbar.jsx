@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-md py-1 z-1 sticky-top ${bgClass}`}
+        className={`navbar navbar-expand-lg py-1 sticky-top ${bgClass}`}
         id="navbar"
       >
         <div className="container justify-content-between align-items-center">
