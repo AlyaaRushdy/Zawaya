@@ -20,11 +20,34 @@ function About() {
               </p>
             </div>
             <div className="col-12 col-lg-6 my-3">
-              <img
+              {/* <img
                 src={aboutImage}
                 alt="outdoor and exterior"
                 className="w-100 p-3 border-gradient"
-              />
+              /> */}
+
+              <div
+                id="about-carousel"
+                class="carousel slide carousel-fade border-gradient p-3"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="/src/assets/images/about-1.jpg"
+                      class="d-block w-100"
+                      alt="hero-image"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="/src/assets/images/about-2.jpg"
+                      class="d-block w-100"
+                      alt="hero-image"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
