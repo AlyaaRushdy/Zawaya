@@ -1,4 +1,5 @@
-import aboutImage from "/src/assets/images/about.jpg";
+import aboutImage1 from "/src/assets/images/about-1.jpg";
+import aboutImage2 from "/src/assets/images/about-2.jpg";
 
 function About() {
   return (
@@ -32,18 +33,18 @@ function About() {
                 data-bs-ride="carousel"
               >
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
+                  <div className="carousel-item active" data-bs-interval="4000">
                     <img
-                      src="/src/assets/images/about-1.jpg"
+                      src={aboutImage1}
                       className="d-block w-100"
-                      alt="hero-image"
+                      alt="about-image"
                     />
                   </div>
-                  <div className="carousel-item">
+                  <div className="carousel-item" data-bs-interval="4000">
                     <img
-                      src="/src/assets/images/about-2.jpg"
+                      src={aboutImage2}
                       className="d-block w-100"
-                      alt="hero-image"
+                      alt="about-image"
                     />
                   </div>
                 </div>
