@@ -28,21 +28,21 @@ function About() {
 
               <div
                 id="about-carousel"
-                class="carousel slide carousel-fade border-gradient p-3"
+                className="carousel slide carousel-fade border-gradient p-3"
                 data-bs-ride="carousel"
               >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
                     <img
                       src="/src/assets/images/about-1.jpg"
-                      class="d-block w-100"
+                      className="d-block w-100"
                       alt="hero-image"
                     />
                   </div>
-                  <div class="carousel-item">
+                  <div className="carousel-item">
                     <img
                       src="/src/assets/images/about-2.jpg"
-                      class="d-block w-100"
+                      className="d-block w-100"
                       alt="hero-image"
                     />
                   </div>
