@@ -11,48 +11,27 @@ function Footer() {
           </HashLink>
           <ul className="list-unstyled d-flex gap-4 m-0">
             <li>
-              <a href="#" className="link-primary ">
+              <a
+                href="https://www.facebook.com/Construction.decor.service/"
+                className="link-primary"
+              >
                 <i className="fa-brands fa-facebook-f fa-xl hover-sec"></i>
               </a>
             </li>
             <li>
-              <a href="#" className="link-primary ">
-                <i className="fa-brands fa-instagram fa-xl hover-sec"></i>
+              <a
+                href="https://www.tiktok.com/@zawaya_decor"
+                className="link-primary"
+              >
+                <i className="fa-brands fa-tiktok fa-xl hover-sec"></i>
               </a>
             </li>
             <li>
-              <a href="#" className="link-primary ">
+              <a href="https://wa.me/00201119990170" className="link-primary">
                 <i className="fa-brands fa-whatsapp fa-xl hover-sec"></i>
               </a>
             </li>
           </ul>
-          {/* <ul className="nav flex-column flex-sm-row">
-            <li className="nav-item">
-              <HashLink className="nav-link hover-sec" to={"/#about"}>
-                About
-              </HashLink>
-            </li>
-            <li className="nav-item">
-              <HashLink className="nav-link hover-sec" to={"/#ourWork"}>
-                Our Work
-              </HashLink>
-            </li>
-            <li className="nav-item">
-              <HashLink className="nav-link hover-sec" to={"/#services"}>
-                Services
-              </HashLink>
-            </li>
-            <li className="nav-item">
-              <HashLink className="nav-link hover-sec" to={"/#projects"}>
-                Projects
-              </HashLink>
-            </li>
-            <li className="nav-item">
-              <HashLink className="nav-link hover-sec" to={"/#contact"}>
-                Contact Us
-              </HashLink>
-            </li>
-          </ul> */}
         </footer>
       </div>
     </>
