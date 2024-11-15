@@ -89,9 +89,15 @@ h6 {
   background-blend-mode: multiply;
   filter: contrast(120%);
 } */
-.hero h1 {
+
+/* .hero h1 {
   text-shadow: 2px 2px 2px #000000;
-  /* backdrop-filter: blur(30px); */
+  backdrop-filter: blur(30px);
+} */
+
+a.hover-sec:hover,
+a.hover-sec:focus {
+  color: var(--bs-secondary) !important;
 }
 .hover-sec:hover,
 .hover-sec.active {
