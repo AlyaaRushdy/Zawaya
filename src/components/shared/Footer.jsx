@@ -27,7 +27,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://wa.me/00201119990170" className="link-primary">
+              <a href="https://wa.me/+201119990170" className="link-primary">
                 <i className="fa-brands fa-whatsapp fa-xl hover-sec"></i>
               </a>
             </li>

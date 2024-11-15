@@ -1,6 +1,6 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ScrollAnimation from "react-animate-on-scroll";
-import React, { useState } from "react";
+import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 const basePath = import.meta.env.DEV ? "/src/" : "/";
