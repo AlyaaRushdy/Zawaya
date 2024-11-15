@@ -13,22 +13,25 @@ function Footer() {
             <li>
               <a
                 href="https://www.facebook.com/Construction.decor.service/"
-                className="link-primary"
+                className="link-primary hover-sec"
               >
-                <i className="fa-brands fa-facebook-f fa-xl hover-sec"></i>
+                <i className="fa-brands fa-facebook-f fa-xl"></i>
               </a>
             </li>
             <li>
               <a
                 href="https://www.tiktok.com/@zawaya_decor"
-                className="link-primary"
+                className="link-primary hover-sec"
               >
-                <i className="fa-brands fa-tiktok fa-xl hover-sec"></i>
+                <i className="fa-brands fa-tiktok fa-xl"></i>
               </a>
             </li>
             <li>
-              <a href="https://wa.me/+201119990170" className="link-primary">
-                <i className="fa-brands fa-whatsapp fa-xl hover-sec"></i>
+              <a
+                href="https://wa.me/+201119990170"
+                className="link-primary hover-sec"
+              >
+                <i className="fa-brands fa-whatsapp fa-xl"></i>
               </a>
             </li>
           </ul>
