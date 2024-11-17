@@ -1,7 +1,30 @@
+import { useEffect, useRef } from "react";
 import aboutImage1 from "/src/assets/images/about-1.jpg";
 import aboutImage2 from "/src/assets/images/about-2.jpg";
+import { Carousel } from "bootstrap";
 
 function About() {
+  const aboutCarouselRef = useRef(null);
+
+  useEffect(() => {
+    let aboutCarousel;
+
+    if (aboutCarouselRef.current) {
+      aboutCarousel = new Carousel(aboutCarouselRef.current, {
+        interval: 4000,
+        pause: false,
+        ride: "carousel",
+      });
+
+      aboutCarousel.cycle();
+    }
+
+    return () => {
+      if (aboutCarousel) {
+        aboutCarousel.dispose();
+      }
+    };
+  }, []);
   return (
     <>
       <section className="py-5" id="about">
@@ -31,16 +54,17 @@ function About() {
                 id="about-carousel"
                 className="carousel slide carousel-fade border-gradient p-3"
                 data-bs-ride="carousel"
+                ref={aboutCarouselRef}
               >
                 <div className="carousel-inner">
-                  <div className="carousel-item active" data-bs-interval="4000">
+                  <div className="carousel-item active">
                     <img
                       src={aboutImage1}
                       className="d-block w-100"
                       alt="about-image"
                     />
                   </div>
-                  <div className="carousel-item" data-bs-interval="4000">
+                  <div className="carousel-item">
                     <img
                       src={aboutImage2}
                       className="d-block w-100"

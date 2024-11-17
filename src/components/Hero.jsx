@@ -2,21 +2,31 @@ import { useEffect, useRef } from "react";
 import hero1 from "../assets/images/hero/hero1.jpg";
 import hero2 from "../assets/images/hero/hero2.jpg";
 import hero3 from "../assets/images/hero/hero3.jpg";
+import hero4 from "../assets/images/hero/hero4.jpg";
 import { Carousel } from "bootstrap";
 
 function Hero() {
-  const carouselRef = useRef(null);
+  const heroCarouselRef = useRef(null);
+
   useEffect(() => {
-    if (carouselRef.current) {
-      const carousel = new Carousel(carouselRef.current, {
+    let heroCarousel;
+
+    if (heroCarouselRef.current) {
+      heroCarousel = new Carousel(heroCarouselRef.current, {
         interval: 5000,
         pause: false,
         ride: "carousel",
       });
-
-      carousel.cycle();
+      heroCarousel.cycle();
     }
+
+    return () => {
+      if (heroCarousel) {
+        heroCarousel.dispose();
+      }
+    };
   }, []);
+
   return (
     <>
       <section
@@ -24,20 +34,18 @@ function Hero() {
         className="carousel slide"
         // data-bs-ride="carousel"
         // data-bs-pause="false"
-        ref={carouselRef}
+        ref={heroCarouselRef}
       >
         <div className="carousel-inner">
-          {console.log(carouselRef.current)}
           <div className="carousel-item h-100 active">
             <img
               src={hero1}
               className="d-block w-100 h-100 object-fit-cover"
               alt="hero-image"
             />
-            <div className="carousel-caption text-start">
-              {/*d-none d-md-block*/}
+            {/* <div className="carousel-caption text-start">
               <h4>3D Modeling</h4>
-            </div>
+            </div> */}
           </div>
           <div className="carousel-item h-100">
             <img
@@ -45,10 +53,9 @@ function Hero() {
               className="d-block w-100 h-100 object-fit-cover"
               alt="hero-image"
             />
-            <div className="carousel-caption text-start">
-              {/*d-none d-md-block*/}
+            {/* <div className="carousel-caption text-start">
               <h4>Exterior</h4>
-            </div>
+            </div> */}
           </div>
           <div className="carousel-item h-100">
             <img
@@ -56,10 +63,19 @@ function Hero() {
               className="d-block w-100 h-100 object-fit-cover"
               alt="hero-image"
             />
-            <div className="carousel-caption text-start">
-              {/*d-none d-md-block*/}
+            {/* <div className="carousel-caption text-start">
               <h4>Office Interior Design</h4>
-            </div>
+            </div> */}
+          </div>
+          <div className="carousel-item h-100">
+            <img
+              src={hero4}
+              className="d-block w-100 h-100 object-fit-cover"
+              alt="hero-image"
+            />
+            {/* <div className="carousel-caption text-start">
+              <h4>Office Interior Design</h4>
+            </div> */}
           </div>
         </div>
         <button
