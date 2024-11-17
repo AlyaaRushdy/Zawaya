@@ -1,17 +1,33 @@
+import { useEffect, useRef } from "react";
 import hero1 from "../assets/images/hero/hero1.jpg";
 import hero2 from "../assets/images/hero/hero2.jpg";
 import hero3 from "../assets/images/hero/hero3.jpg";
+import { Carousel } from "bootstrap";
 
 function Hero() {
+  const carouselRef = useRef(null);
+  useEffect(() => {
+    if (carouselRef.current) {
+      const carousel = new Carousel(carouselRef.current, {
+        interval: 5000,
+        pause: false,
+        ride: "carousel",
+      });
+
+      carousel.cycle();
+    }
+  }, []);
   return (
     <>
       <section
         id="hero-carousel"
         className="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-pause="false"
+        // data-bs-ride="carousel"
+        // data-bs-pause="false"
+        ref={carouselRef}
       >
         <div className="carousel-inner">
+          {console.log(carouselRef.current)}
           <div className="carousel-item h-100 active">
             <img
               src={hero1}
