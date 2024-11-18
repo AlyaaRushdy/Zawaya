@@ -44,16 +44,9 @@ function About() {
               </p>
             </div>
             <div className="col-12 col-lg-6 my-3">
-              {/* <img
-                src={aboutImage}
-                alt="outdoor and exterior"
-                className="w-100 p-3 border-gradient"
-              /> */}
-
               <div
                 id="about-carousel"
                 className="carousel slide carousel-fade border-gradient p-3"
-                data-bs-ride="carousel"
                 ref={aboutCarouselRef}
               >
                 <div className="carousel-inner">
