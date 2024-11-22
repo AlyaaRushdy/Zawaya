@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
-import aboutImage1 from "/src/assets/images/about-1.jpg";
-import aboutImage2 from "/src/assets/images/about-2.jpg";
+import aboutImage1 from "/src/assets/images/about/about-1.jpg";
+import aboutImage2 from "/src/assets/images/about/about-2.jpg";
 import { Carousel } from "bootstrap";
+
+const aboutImages = [aboutImage1, aboutImage2];
 
 function About() {
   const aboutCarouselRef = useRef(null);
@@ -15,8 +17,6 @@ function About() {
         pause: false,
         ride: "carousel",
       });
-
-      aboutCarousel.cycle();
     }
 
     return () => {
@@ -50,20 +50,18 @@ function About() {
                 ref={aboutCarouselRef}
               >
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <img
-                      src={aboutImage1}
-                      className="d-block w-100"
-                      alt="about-image"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={aboutImage2}
-                      className="d-block w-100"
-                      alt="about-image"
-                    />
-                  </div>
+                  {aboutImages.map((imgSrc, i) => (
+                    <div
+                      className={`carousel-item ${i == 0 ? "active" : ""}`}
+                      key={i}
+                    >
+                      <img
+                        src={imgSrc}
+                        className="d-block w-100"
+                        alt="about-image"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
