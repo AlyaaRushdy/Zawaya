@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react";
+import { Carousel } from "bootstrap";
 import hero1 from "../assets/images/hero/hero1.jpg";
 import hero2 from "../assets/images/hero/hero2.jpg";
 import hero3 from "../assets/images/hero/hero3.jpg";
 import hero4 from "../assets/images/hero/hero4.jpg";
-import hero4Phone from "../assets/images/hero/hero4-phone.jpg";
-import { Carousel } from "bootstrap";
+import hero4Phone from "../assets/images/hero/hero4-phone2.jpg";
+
+const heroImages = [hero1, hero2, hero3, hero4];
 
 function Hero() {
   const heroCarouselRef = useRef(null);
@@ -18,7 +20,6 @@ function Hero() {
         pause: false,
         ride: "carousel",
       });
-      heroCarousel.cycle();
     }
 
     return () => {
@@ -36,40 +37,29 @@ function Hero() {
         ref={heroCarouselRef}
       >
         <div className="carousel-inner">
-          <div className="carousel-item h-100 active">
-            <img
-              src={hero1}
-              className="d-block w-100 h-100 object-fit-cover"
-              alt="hero-image"
-            />
-          </div>
-          <div className="carousel-item h-100">
-            <img
-              src={hero2}
-              className="d-block w-100 h-100 object-fit-cover"
-              alt="hero-image"
-            />
-          </div>
-          <div className="carousel-item h-100">
-            <img
-              src={hero3}
-              className="d-block w-100 h-100 object-fit-cover"
-              alt="hero-image"
-            />
-          </div>
-          <div className="carousel-item h-100">
-            <img
-              src={hero4Phone}
-              className="d-block d-lg-none w-100 h-100 object-fit-cover"
-              alt="hero-image"
-            />
-            <img
-              src={hero4}
-              className="d-none d-lg-block w-100 h-100 object-fit-cover"
-              alt="hero-image"
-            />
-          </div>
+          {heroImages.map((imgSrc, i) => (
+            <div
+              className={`carousel-item h-100 ${i === 0 ? "active" : ""}`}
+              key={i}
+            >
+              {imgSrc == hero4 && (
+                <img
+                  src={hero4Phone}
+                  className="d-block d-lg-none w-100 h-100 object-fit-cover"
+                  alt="hero-image"
+                />
+              )}
+              <img
+                src={imgSrc}
+                className={`${
+                  imgSrc == hero4 ? "d-none d-lg-block" : "d-block"
+                } w-100 h-100 object-fit-cover`}
+                alt="hero-image"
+              />
+            </div>
+          ))}
         </div>
+
         <button
           className="carousel-control-prev"
           type="button"
