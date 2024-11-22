@@ -7,31 +7,31 @@ const basePath = import.meta.env.DEV ? "/src/" : "/";
 
 const importAllAlbumsObject = {
   album1: import.meta.glob(
-    "/src/assets/images/projects/1/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/01/*.{jpg,jpeg,png,gif}"
   ),
   album2: import.meta.glob(
-    "/src/assets/images/projects/2/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/02/*.{jpg,jpeg,png,gif}"
   ),
   album3: import.meta.glob(
-    "/src/assets/images/projects/3/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/03/*.{jpg,jpeg,png,gif}"
   ),
   album4: import.meta.glob(
-    "/src/assets/images/projects/4/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/04/*.{jpg,jpeg,png,gif}"
   ),
   album5: import.meta.glob(
-    "/src/assets/images/projects/5/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/05/*.{jpg,jpeg,png,gif}"
   ),
   album6: import.meta.glob(
-    "/src/assets/images/projects/6/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/06/*.{jpg,jpeg,png,gif}"
   ),
   album7: import.meta.glob(
-    "/src/assets/images/projects/7/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/07/*.{jpg,jpeg,png,gif}"
   ),
   album8: import.meta.glob(
-    "/src/assets/images/projects/8/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/08/*.{jpg,jpeg,png,gif}"
   ),
   album9: import.meta.glob(
-    "/src/assets/images/projects/9/*.{jpg,jpeg,png,gif}"
+    "/src/assets/images/projects/09/*.{jpg,jpeg,png,gif}"
   ),
   album10: import.meta.glob(
     "/src/assets/images/projects/10/*.{jpg,jpeg,png,gif}"
@@ -48,9 +48,9 @@ const importAllAlbumsObject = {
   album14: import.meta.glob(
     "/src/assets/images/projects/14/*.{jpg,jpeg,png,gif}"
   ),
-  album15: import.meta.glob(
-    "/src/assets/images/projects/15/*.{jpg,jpeg,png,gif}"
-  ),
+  // album15: import.meta.glob(
+  //   "/src/assets/images/projects/15/*.{jpg,jpeg,png,gif}"
+  // ),
 };
 const importedAlbumsValues = Object.values(importAllAlbumsObject);
 const albums = {};
@@ -87,7 +87,7 @@ function Projects() {
         <div className="container">
           <h2 className="fw-bold pb-4">Our Projects</h2>
           <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+            columnsCountBreakPoints={{ 350: 1, 750: 2, 991: 3 }}
           >
             {/* animate__fadeInUp  animate__backInUp animate__fadeInUpBig  */}
             <Masonry columnsCount={3} gutter="10px">
@@ -107,6 +107,7 @@ function Projects() {
                       display: "block",
                       cursor: "pointer",
                     }}
+                    className="project-img"
                     onClick={() => openAlbum(image.albumName)}
                   />
                 </ScrollAnimation>
