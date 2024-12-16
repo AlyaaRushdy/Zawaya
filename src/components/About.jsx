@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import aboutImage1 from "/src/assets/images/about/about-1.jpg";
 import aboutImage2 from "/src/assets/images/about/about-2.jpg";
-import { Carousel } from "bootstrap";
 
 const aboutImages = [aboutImage1, aboutImage2];
 
@@ -12,7 +11,7 @@ function About() {
     let aboutCarousel;
 
     if (aboutCarouselRef.current) {
-      aboutCarousel = new Carousel(aboutCarouselRef.current, {
+      aboutCarousel = new window.bootstrap.Carousel(aboutCarouselRef.current, {
         interval: 4000,
         pause: false,
         ride: "carousel",
@@ -25,6 +24,7 @@ function About() {
       }
     };
   }, []);
+
   return (
     <>
       <section className="py-5" id="about">

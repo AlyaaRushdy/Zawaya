@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { Carousel } from "bootstrap";
 import hero1 from "../assets/images/hero/hero1.jpg";
 import hero2 from "../assets/images/hero/hero2.jpg";
 import hero3 from "../assets/images/hero/hero3.jpg";
@@ -15,7 +14,7 @@ function Hero() {
     let heroCarousel;
 
     if (heroCarouselRef.current) {
-      heroCarousel = new Carousel(heroCarouselRef.current, {
+      heroCarousel = new window.bootstrap.Carousel(heroCarouselRef.current, {
         interval: 5000,
         pause: false,
         ride: "carousel",
