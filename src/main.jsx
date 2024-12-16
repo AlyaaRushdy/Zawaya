@@ -5,6 +5,11 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
+import * as bootstrap from "bootstrap"; // Import Bootstrap as a module
+
+// Attach to window for global access
+window.bootstrap = bootstrap;
+
 import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";
