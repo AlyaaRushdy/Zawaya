@@ -35,6 +35,11 @@ h5,
 h6 {
   font-family: "Nunito", "Roboto", sans-serif;
 }
+
+textarea {
+  resize: none !important;
+}
+
 #root {
   min-height: 100%;
 }
@@ -50,9 +55,6 @@ h6 {
 #hero-carousel .carousel-inner {
   height: 100lvh;
   margin-top: -58px;
-}
-#hero-carousel .carousel-item img {
-  /* filter: contrast(120%); */
 }
 
 #hero-carousel .carousel-caption {
@@ -146,18 +148,14 @@ a.hover-sec:focus {
 .service-card:hover h5 {
   color: var(--bs-secondary) !important;
 }
-textarea {
-  resize: none !important;
-}
-
-/* h2::first-letter {
-  font-size: 52px;
-  color: #e1922f;
-} */
 
 @media screen and (min-width: 768px) {
   .navbar-brand {
     width: 180px;
+  }
+
+  #hero-carousel .carousel-item img {
+    filter: contrast(120%);
   }
 
   #hero-carousel .carousel-inner {
