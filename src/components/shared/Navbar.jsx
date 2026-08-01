@@ -23,7 +23,7 @@ function Navbar() {
         id="navbar"
       >
         <div className="container justify-content-between align-items-center">
-          <HashLink className="navbar-brand" to={"/#hero"} smooth>
+          <HashLink className="navbar-brand" to={"/#"} smooth>
             <img src={logo} alt="logo img" className="w-100" />
           </HashLink>
           <button

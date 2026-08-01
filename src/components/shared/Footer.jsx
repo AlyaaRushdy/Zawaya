@@ -6,7 +6,7 @@ function Footer() {
     <>
       <div className="container">
         <footer className="d-flex flex-row justify-content-between align-items-center gap-4 py-3 my-4 border-top">
-          <HashLink to="/#hero">
+          <HashLink to={"/#"}>
             <img src={logoSec} alt="logo img" style={{ width: "60px" }} />
           </HashLink>
           <ul className="list-unstyled d-flex gap-4 m-0">
